@@ -15,12 +15,13 @@ M(2,1) = M(1,2);
 M(3,1) = M(1,3);
 M(3,2) = M(2,3);
 
-[V,D] = eig(M)
+M
+[V,D] = eigs(M,1,'SM')
 vec = V(:,1);
 val = D(1,1);
 
 for i = 2:size(D,1)
-    if(D(i,i)<val)
+    if((D(i,i)<val))
         val = D(i,i);
         vec = V(:,i);
     end
