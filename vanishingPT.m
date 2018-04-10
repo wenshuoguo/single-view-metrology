@@ -2,8 +2,9 @@ function [ vec ] = vanishingPT(lines)
 % Compute the vanishing point from more than two lines
 n = size(lines,1);
 M = zeros(3,3);
+
 for i=1:n
-    line = cross(lines(n,1:3),lines(n,4:6));
+    line = cross(lines(i,1:3),lines(i,4:6));
     M(1,1) = M(1,1)+line(1)*line(1);
     M(1,2) = M(1,2)+line(1)*line(2);
     M(1,3) = M(1,3)+line(1)*line(3);
@@ -15,8 +16,7 @@ M(2,1) = M(1,2);
 M(3,1) = M(1,3);
 M(3,2) = M(2,3);
 
-M
-[V,D] = eigs(M,1,'SM')
+[V,D] = eigs(M);
 vec = V(:,1);
 val = D(1,1);
 
