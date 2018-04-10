@@ -34,4 +34,4 @@ H_xy = inv([a*x_vpt,b*y_vpt,transpose(o)])
 %a = H_xy*transpose([174,366,1])
 %a = a/a(3)
 % texture mapping
-xy_texture = texture(img,H_xy);
+xy_texture = texture2(img,H_xy);

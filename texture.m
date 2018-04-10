@@ -1,5 +1,6 @@
 function [output] = texture(img,H)
 [height,width,chn] = size(img);
+%600 800 3
 
 y_all = zeros(height,width);
 x_all = zeros(height,width);
@@ -8,14 +9,17 @@ for i=1:height
     for j=1:width
         %retrieve this point's corresponding pixel
         pt = [j,i,1];
+        %H is already inversed!
         pixel = H*transpose(pt);
         pixel = ceil(pixel/pixel(3));
-        
+   
+    
         x_all(i,j) = pixel(1);
         y_all(i,j) = pixel(2);
 
     end
 end
+
 
 %normalize output(i,j)
 xmin = min(x_all(:));
@@ -28,10 +32,10 @@ if(ymin<=0)
     y_all = y_all-ymin+1;
 end
 
-xmin = min(x_all(:));
-ymin = min(y_all(:));
-xmax = max(x_all(:));
-ymax = max(y_all(:));
+ xmin = min(x_all(:));
+ ymin = min(y_all(:));
+ xmax = max(x_all(:));
+ ymax = max(y_all(:));
 
 output = zeros(xmax,ymax,3);
 for i=1:height
