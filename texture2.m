@@ -2,24 +2,6 @@ function [output] = texture2(img,H)
 [height,width,~] = size(img);
 %600 800 3
 
-%save transformation
-% all1 = zeros(height,width);
-% all2 = zeros(height,width);
-% all3 = zeros(height,width);
-% 
-% for j=1:height
-%     for i=1:width
-%         %retrieve this point's corresponding pixel
-%         pt = [j,i,1];
-%         %H is already inversed!
-%         pixel = H*transpose(pt);
-%         pixel = ceil(pixel/pixel(3));
-%         all1(j,i) = pixel(1);
-%         all2(j,i) = pixel(2);
-%         all3(j,i) = pixel(3);
-% 
-%     end
-% end
 
 %vertex
 pt1 = [1,1,1];
@@ -106,14 +88,7 @@ for j=1:ymax
             i0 = i + xshift-1;
             pt = inv(H)*transpose([i0,j0,1]);
             pt = ceil(pt/pt(3));
-%             if pt(1) > height
-%                  disp('exceed')
-%                  disp(pt(1))
-%             end
-%             if pt(2) > height
-%                  disp('exceed')
-%                  disp(pt(1))
-%             end
+
             if pt(1)<width && pt(2)<height 
                 output(j,i,1:3) = img(pt(2),pt(1), 1:3);
             end
