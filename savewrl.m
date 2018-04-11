@@ -49,7 +49,7 @@ for i=1:n
 % %         double(tempp(1)), ...
 % %         double(tempp(2)));
 %     end
-    fprintf('          0 0,\n          1 0,\n          1 1,\n          0 1,\n')
+    fprintf(fid, '          0 0,\n          1 0,\n          1 1,\n          0 1,\n');
     
     fprintf(fid, '\n            ]\n     }\n     texCoordIndex [\n           ');
     for j = 1:4

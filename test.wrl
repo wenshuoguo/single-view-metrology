@@ -7,16 +7,16 @@ Collision {
 Shape {
    appearance Appearance {
        texture ImageTexture {
-            url "1.jpg"
+            url "test1.jpg"
        }
 	}
  geometry IndexedFaceSet {
       coord Coordinate {
             point [
-                1.00000   1.00000   1.00000, 
-                1.00000   1.00000   1.00000, 
-                1.00000   1.00000   1.00000, 
-                1.00000   1.00000   1.00000, 
+                0.00192   0.00179   0.99795, 
+                0.48312   0.01623   0.86459, 
+                0.48312   0.01623   0.00000, 
+                0.00192   0.00179   0.00000, 
 
             ]
      }
@@ -25,6 +25,44 @@ Shape {
         ]
      texCoord TextureCoordinate {
           point [
+          0 0,
+          1 0,
+          1 1,
+          0 1,
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "test2.jpg"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+                0.68882   0.02338   0.69183, 
+                0.78385   0.02890   0.34808, 
+                0.78385   0.02890   0.00000, 
+                0.68882   0.02338   0.00000, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+          0 0,
+          1 0,
+          1 1,
+          0 1,
 
             ]
      }
