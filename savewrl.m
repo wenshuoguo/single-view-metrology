@@ -8,7 +8,9 @@ fprintf(fid,'#VRML V2.0 utf8\n\nCollision {\n	collide FALSE\n children [\n');
  
 for i=1:n
     fprintf(fid, '\nShape {\n   appearance Appearance {\n       texture ImageTexture {\n            url "');
-    filename = strcat(num2str(i),'.jpg');
+    filename = name;
+    filename =  strcat(filename,num2str(i));
+    filename = strcat(filename,'.jpg');
     fprintf(fid, filename);
     fprintf(fid, '"\n       }\n	}\n geometry IndexedFaceSet {\n      coord Coordinate {\n            point [\n');
 
