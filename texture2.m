@@ -9,7 +9,7 @@ pt2 = [1,height,1];
 pt3 = [width,1,1];
 pt4 = [width,height,1];
 
-disp('debug')
+%disp('debug')
 pixel1 = H*transpose(pt1);
 %disp(pixel1)
 pixel1 = ceil(pixel1/pixel1(3));

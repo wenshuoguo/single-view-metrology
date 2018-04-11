@@ -1,0 +1,38 @@
+#VRML V2.0 utf8
+
+Collision {
+	collide FALSE
+ children [
+
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "1.jpg"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+                1.00000   1.00000   1.00000, 
+                1.00000   1.00000   1.00000, 
+                1.00000   1.00000   1.00000, 
+                1.00000   1.00000   1.00000, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+	] 
+}
