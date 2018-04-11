@@ -1,0 +1,110 @@
+#VRML V2.0 utf8
+
+Collision {
+	collide FALSE
+ children [
+
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "test1.png"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+                0.01215   1.00000   0.44142, 
+                0.01590   0.01735   0.44142, 
+                0.72040   0.02100   0.42968, 
+                0.73797   0.99870   0.43555, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+          0 0,
+          1 0,
+          1 1,
+          0 1,
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "test2.png"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+               -0.02352   0.94265   0.00556, 
+                0.00315  -0.01209   0.00556, 
+                0.02293   0.01064   0.43555, 
+                0.00931   0.99565   0.44142, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+          0 0,
+          1 0,
+          1 1,
+          0 1,
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "test3.png"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+               -0.00820  -0.00278   0.00556, 
+                0.68393  -0.01209   0.00556, 
+                0.71861   0.01174   0.43555, 
+                0.02293   0.01064   0.43555, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+          0 0,
+          1 0,
+          1 1,
+          0 1,
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+	] 
+}

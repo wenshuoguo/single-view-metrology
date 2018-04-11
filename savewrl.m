@@ -10,7 +10,7 @@ for i=1:n
     fprintf(fid, '\nShape {\n   appearance Appearance {\n       texture ImageTexture {\n            url "');
     filename = name;
     filename =  strcat(filename,num2str(i));
-    filename = strcat(filename,'.jpg');
+    filename = strcat(filename,'.png');
     fprintf(fid, filename);
     fprintf(fid, '"\n       }\n	}\n geometry IndexedFaceSet {\n      coord Coordinate {\n            point [\n');
 
