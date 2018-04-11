@@ -22,7 +22,7 @@ disp('Please indicate 6 points,each 2 for a line to calculate vz');
 [x,y] = ginput(6)
 z_p = [[[x(1),y(1),w],[x(2),y(2),w]];[[x(3),y(3),w],[x(4),y(4),w]];[[x(5),y(5),w],[x(6),y(6),w]]];
 z_vpt = vanishingPT(z_p);
-
+ 
 x_vpt = x_vpt/x_vpt(3)
 y_vpt = y_vpt/y_vpt(3)
 z_vpt = z_vpt/z_vpt(3)
