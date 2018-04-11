@@ -1,4 +1,4 @@
-img = imread('sample.bmp');
+img = imread('cube.jpg');
 %img = flipdim(img ,1);
 [height,width,chn] = size(img);
 image(img);
@@ -159,7 +159,7 @@ end
 %normalize allPts
 max_all = max(allPts(:));
 allPts = allPts/max_all;
-savewrl('test',n,allPts);
+savewrl('cube',n,allPts);
 
     
 

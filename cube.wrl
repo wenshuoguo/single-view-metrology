@@ -1,0 +1,110 @@
+#VRML V2.0 utf8
+
+Collision {
+	collide FALSE
+ children [
+
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "c1.png"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+                0.08848   1.00000   0.90527, 
+               -0.01604  -0.00087   0.90527, 
+                0.89959   0.02601   0.92458, 
+                0.95525   0.97065   0.93101, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+          0 0,
+          1 0,
+          1 1,
+          0 1,
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "c2.png"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+               -0.03746   0.87968   0.00953, 
+               -0.02096  -0.01234   0.00953, 
+               -0.01863   0.00416   0.91814, 
+                0.02481   0.95011   0.91814, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+          0 0,
+          1 0,
+          1 1,
+          0 1,
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "c3.png"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+               -0.01789  -0.03557   0.00415, 
+                0.81182  -0.15468   0.01784, 
+                0.89275   0.01300   0.92458, 
+               -0.01831   0.00456   0.92458, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+          0 0,
+          1 0,
+          1 1,
+          0 1,
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+	] 
+}
