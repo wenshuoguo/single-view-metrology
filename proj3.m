@@ -58,6 +58,8 @@ imwrite(uint8(xy_texture),'xy.jpg');
 imwrite(uint8(xz_texture),'xz.jpg');
 imwrite(uint8(yz_texture),'yz.jpg');
 
+ans = input('Please crop your photo and rename it')
+
 disp('specify ruler B & R points')
 [x,y] = ginput(2);
 rulerB = ceil([x(1),y(1),1]);
@@ -67,6 +69,7 @@ R = input('specify R');
 
 %construct a table to store the 3d coor of all pts in image
 threeD = zeros(height,width,3);
+
 
 %construct a straight line
 
@@ -109,11 +112,28 @@ for i = xmin:xmax
         for n = 1:nmax
             pixel = Hz*transpose([m,n,1]);
             pixel = ceil(pixel/pixel(3));
-            threeD(pixel(1),pixel(2),1:3) = [m,n,h];
+            if pixel(1)>0 && pixel(1)<height && pixel(2)>0 && pixel(2)<width
+                threeD(pixel(1),pixel(2),1:3) = [m,n,h];
+            end
         end
     end
 end
 
+%now select the point to generate .wrl file
+n = input('Please indicate the number to textures');
+allPts = [];
+for i=1:n
+    disp('Select 4 pts for one texture')
+    [x,y] = ginput(4);
+
+    for j=1:4
+
+        size(threeD);
+        target = threeD(ceil(y(j)),ceil(x(j)),1:3);
+        allPts = [allPts;target];
+    end
+end
+savewrl('test',n,allPts);
 
     
 

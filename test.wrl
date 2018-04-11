@@ -13,10 +13,70 @@ Shape {
  geometry IndexedFaceSet {
       coord Coordinate {
             point [
-                1.00000   1.00000   1.00000, 
-                1.00000   1.00000   1.00000, 
-                1.00000   1.00000   1.00000, 
-                1.00000   1.00000   1.00000, 
+                0.00000   0.00000   0.00000, 
+              210.00000 154.00000 186.00000, 
+                0.00000   0.00000   0.00000, 
+                0.00000   0.00000   0.00000, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "2.jpg"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+                0.00000   0.00000   0.00000, 
+              110.00000 284.00000 186.00000, 
+              211.00000 164.00000 186.00000, 
+                0.00000   0.00000   0.00000, 
+
+            ]
+     }
+     coordIndex [
+             0,1,2,3,-1,
+        ]
+     texCoord TextureCoordinate {
+          point [
+
+            ]
+     }
+     texCoordIndex [
+           0,1,2,3,-1,
+        ]
+     solid FALSE
+	}
+}
+Shape {
+   appearance Appearance {
+       texture ImageTexture {
+            url "3.jpg"
+       }
+	}
+ geometry IndexedFaceSet {
+      coord Coordinate {
+            point [
+              110.00000 284.00000 186.00000, 
+                0.00000   0.00000   0.00000, 
+                0.00000   0.00000   0.00000, 
+              210.00000 160.00000 186.00000, 
 
             ]
      }
