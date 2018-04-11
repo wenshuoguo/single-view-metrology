@@ -54,14 +54,14 @@ xy_texture = texture2(img,H_xy);
 xz_texture = texture2(img,H_xz);
 yz_texture = texture2(img,H_yz);
 
-imwrite(uint8(xy_texture),'yx.jpg');
-imwrite(uint8(xz_texture),'yz.jpg');
-imwrite(uint8(yz_texture),'xz.jpg');
+imwrite(uint8(xy_texture),'xy.jpg');
+imwrite(uint8(xz_texture),'xz.jpg');
+imwrite(uint8(yz_texture),'yz.jpg');
 
 disp('specify ruler B & R points')
 [x,y] = ginput(2);
-rulerB = ceil[x(1),y(1),1];
-rulerR = ceil[x(2),y(2),1];
+rulerB = ceil([x(1),y(1),1]);
+rulerR = ceil([x(2),y(2),1]);
 
 R = input('specify R');
 
@@ -69,7 +69,9 @@ R = input('specify R');
 threeD = zeros(height,width,3);
 
 %construct a straight line
+
 slope = (rulerB(2)-rulerR(2))/(rulerB(1)-rulerR(1));
+
 
 xmin = min(rulerB(1),rulerR(1));
 xmax = max(rulerB(1),rulerR(1));
@@ -83,7 +85,17 @@ end
 mmax = input('max height of z0 plane');
 nmax = input('max width of z0 plane');
 for i = xmin:xmax
-    j = ceil(slope*(i-xmin)+xminy);
+    if slope ~= Inf
+        j = ceil(slope*(i-xmin)+xminy);
+    else 
+        j = ceil(xminy + 1);
+    end
+    
+%     disp('debug')
+%     disp(rulerB)
+%     disp(rulerR)
+%     disp(slope)
+%    disp(j)
     t = [i,j,1];
     h = (norm(t-rulerB)*norm(z_vpt-transpose(rulerR)))/(norm(rulerR-rulerB)*norm(z_vpt-transpose(t)))*R;
     z0 = [0,0,h];
