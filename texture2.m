@@ -9,7 +9,7 @@ pt2 = [1,height,1];
 pt3 = [width,1,1];
 pt4 = [width,height,1];
 
-disp('debug')
+%disp('debug')
 pixel1 = H*transpose(pt1);
 %disp(pixel1)
 pixel1 = ceil(pixel1/pixel1(3));
@@ -49,15 +49,15 @@ xmin = min([pixel1(1) pixel2(1) pixel3(1) pixel4(1)]);
 ymin = min([pixel1(2) pixel2(2) pixel3(2) pixel4(2)]);
 xmax = max([pixel1(1) pixel2(1) pixel3(1) pixel4(1)]);
 ymax = max([pixel1(2) pixel2(2) pixel3(2) pixel4(2)]);
-disp('debug')
-disp(xmin)
-disp(xmax)
-disp(ymin)
-disp(ymax)
-disp(pixel1)
-disp(pixel2)
-disp(pixel3)
-disp(pixel4)
+%disp('debug')
+%disp(xmin)
+%disp(xmax)
+%disp(ymin)
+%disp(ymax)
+%disp(pixel1)
+%disp(pixel2)
+%disp(pixel3)
+%disp(pixel4)
 
 %color vertex to white
 output = zeros(ymax,xmax,3);
