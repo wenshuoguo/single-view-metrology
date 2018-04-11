@@ -89,12 +89,12 @@ for j=1:ymax
             pt = inv(H)*transpose([i0,j0,1]);
             pt = ceil(pt/pt(3));
 
-            if pt(1)<width && pt(2)<height 
+            if pt(1)<width && pt(2)<height && pt(1)>0 && pt(2)>0
                 output(j,i,1:3) = img(pt(2),pt(1), 1:3);
             end
         end
     end
 end
-imshow(uint8(output));
+%imshow(uint8(output));
 
 end
