@@ -1,7 +1,8 @@
 # Single View Metrology
-CV project COMP5421
-# proj3
-In this assignment we create 3D texture-mapped models from a single image using the single view modeling method.
+COMP5421 Computer Vision
+
+# Project 3
+In this project we create 3D texture-mapped models from a single image using the single view modeling method.
 
 The basic idea comes from the original paper "Single View Metrology," by Criminisi, Reid, and Zisserman, ICCV 99.
 
